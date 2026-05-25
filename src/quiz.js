@@ -10,14 +10,29 @@ startQuizBtn.addEventListener("click", function () {
 
 let questions = [
     {
-        question: "1. this is a question?",
+        question: "1. what is pee pee poo poo?",
         options: ["pee", "poo", "poopie", "peepoo"],
         answer: 2
     },
     {
-        question: "2. another question?",
-        options: ["big", "gest", "beef", "steak"],
+        question: "2. what is my favorite color?",
+        options: ["blood of my enemies", "diarrhea", "tree", "chartreuse"],
+        answer: 0
+    },
+    {
+        question: "3. which instrument do i not know?",
+        options: ["piano", "guitar", "violin", "flute"],
+        answer: 2
+    },
+    {
+        question: "4. what ",
+        options: ["pizza", "sushi", "tacos", "ice cream"],
         answer: 1
+    },
+    {
+        question: "4. where did we first meet?",
+        options: ["upper dance studio", "lower dance studio", "salsas", ""],
+        answer: 0
     }
 ];
 
