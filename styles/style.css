@@ -113,3 +113,14 @@ button:hover {
   align-items: center;
   gap: 2rem;
 }
+
+.question {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}

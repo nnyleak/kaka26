@@ -8,3 +8,52 @@ startQuizBtn.addEventListener("click", function () {
     quiz.style.display = "flex";
 });
 
+let questions = [
+    {
+        question: "1. this is a question?",
+        options: ["pee", "poo", "poopie", "peepoo"],
+        answer: 2
+    },
+    {
+        question: "2. another question?",
+        options: ["big", "gest", "beef", "steak"],
+        answer: 1
+    }
+];
+
+let questionEl = document.querySelector(".question");
+let optionsEl = document.querySelector(".options");
+let submitBtn = document.querySelector(".submit-btn");
+let wrongEl = document.querySelector(".wrong-answer");
+let currentQuestionIndex = 0;
+
+function loadQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    questionEl.textContent = currentQuestion.question;
+    optionsEl.innerHTML = "";
+    currentQuestion.options.forEach((option, index) => {
+        let optionElement = document.createElement("button");
+        optionElement.textContent = option;
+        optionElement.classList.add("option");
+        optionElement.addEventListener("click", () => checkAnswer(index));
+        optionsEl.appendChild(optionElement);
+    });
+}
+
+function checkAnswer(selectedIndex) {
+    let currentQuestion = questions[currentQuestionIndex];
+    if (selectedIndex === currentQuestion.answer) {
+        currentQuestionIndex++;
+    } else {
+        quiz.style.display = "none";
+
+    }
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        alert("Congratulations! You've completed the quiz.");
+    }
+}
+
+loadQuestion();
+
