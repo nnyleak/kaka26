@@ -23,18 +23,17 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  height: 80vh;
-  width: 60vw;
+  height: 60vh;
+  width: 50vw;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   padding: 2rem;
   background: url(../assets/231-subtle-white-paper.webp) repeat;
 }
 
 h1 {
   font-weight: 500;
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--text-color);
   margin: 0;
   text-align: center;
@@ -43,7 +42,7 @@ h1 {
 button {
   border: none;
   background: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: italic;
   font-family: "Gaegu", sans-serif;
   color: var(--text-color);
@@ -60,25 +59,27 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  border: 2px solid var(--text-color);
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .pinpad-header {
   display: flex;
   justify-content: center;
   margin: 1rem;
-  height: 3rem;
+  height: 2rem;
 }
 
 .pinpad-input {
   font-family: "Gaegu", sans-serif;
-  width: 20rem;
+  width: 7rem;
   cursor: default;
   background: transparent;
   border: 2px solid var(--text-color);
   color: var(--text-color);
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .pinpad-input:focus {
@@ -87,12 +88,11 @@ button:hover {
 
 .row {
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .pinpad-btn {
-  width: 3rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-style: normal;
 }
 
@@ -112,15 +112,38 @@ button:hover {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin: 2rem;
 }
 
 .question {
   font-size: 2rem;
   color: var(--text-color);
+  text-align: center;
 }
 
 .options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+.wrong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrong h1 {
+  font-size: 3rem;
+}
+
+.wrong p {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.wrong-img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 1rem;
 }

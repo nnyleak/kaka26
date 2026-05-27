@@ -25,14 +25,39 @@ let questions = [
         answer: 2
     },
     {
-        question: "4. what ",
-        options: ["pizza", "sushi", "tacos", "ice cream"],
+        question: "4. what would i gobble up in 2 seconds?",
+        options: ["chick fil a", "sushi", "ferrero rocher", "all of the above"],
+        answer: 3
+    },
+    {
+        question: "5. what's my mcdonalds order?",
+        options: ["big mac", "20pc nugs w stolen fries", "happy meal w xtra fries", "m&ms mcflurry w xtra m&ms"],
         answer: 1
     },
     {
-        question: "4. where did we first meet?",
-        options: ["upper dance studio", "lower dance studio", "salsas", ""],
+        question: "6. where did we first meet?",
+        options: ["upper dance studio", "lower dance studio", "salsas", "ur moms house"],
+        answer: 1
+    },
+    {
+        question: "7. what did we do on our first city date as a couple?",
+        options: ["japan fes", "taco bell", "ktown", "kinokuniya"],
         answer: 0
+    },
+    {
+        question: "8. what movie did we watch when we built the kiki's diorama?",
+        options: ["knives out", "the substance", "the strangers", "soft & quiet"],
+        answer: 3
+    },
+    {
+        question: "9. where did we eat for brunch on our first anniversary?",
+        options: ["bahama breeze", "hot stone bbq", "mcdonalds", "willow & whisk"],
+        answer: 1
+    },
+    {
+        question: "10. would you still love me if i was a giant cockroach?",
+        options: ["yes", "YESSSSS", "FUCKKKK I LOVE YOU COCKROACH", "OMFG SEXY YESSSSS"],
+        answer: 2
     }
 ];
 
@@ -61,7 +86,11 @@ function checkAnswer(selectedIndex) {
         currentQuestionIndex++;
     } else {
         quiz.style.display = "none";
-
+        document.querySelector(".wrong").style.display = "flex";
+        document.querySelector("#try-again-btn").addEventListener("click", () => {
+            document.querySelector(".wrong").style.display = "none";
+            quiz.style.display = "flex";
+        });
     }
     if (currentQuestionIndex < questions.length) {
         loadQuestion();
