@@ -5,15 +5,14 @@ const tabs = document.querySelectorAll(".tab");
 
 const allApps = new Map();
 
+// loading screen logic
 const loadingText = document.getElementById("loading-text");
 const interval = setInterval(() => {
     audio.play();
     clearInterval(interval);
-    document.getElementById("loading-screen").style.opacity = "0";
+    document.getElementById("loading-screen").style.display = "none";
     return;
 }, 2000);
-
-// loading screen logic
 
 // make windows draggable
 function makeDraggable(win) {
@@ -126,3 +125,15 @@ tabs.forEach((tab) => {
     openApp(id);
   });
 });
+
+// taskbar clock
+function updateClock() {
+    const now = new Date();
+
+    const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    document.getElementById("clock").innerText = time;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
