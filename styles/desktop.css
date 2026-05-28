@@ -54,11 +54,10 @@ body {
 }
 
 .desktop-icon:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--accent-color);
 }
 
 /* WINDOW */
-
 .window {
     position: absolute;
     top: 50px;
@@ -72,7 +71,7 @@ body {
     filter: brightness(0.75);
 
     border: 2px solid black;
-    box-shadow: black -6px 7px 0px 0px;
+    box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .window.active {
@@ -176,4 +175,37 @@ body {
     color: white;
     font-size: 14px;
     cursor: pointer;
+}
+
+/* WIDGETS */
+#widgets {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.widget {
+    
+    width: 200px;
+    color: white;
+    background-color: #211414;
+    border: 2px solid black;
+    box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.widget-header {
+    height: 30px;
+    background-color: var(--accent-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.widget-body {
+    padding: 10px;
 }

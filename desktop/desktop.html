@@ -202,9 +202,9 @@
       </div>
 
       <!-- food -->
-      <div class="window" id="food">
+      <div class="window" id="sushi">
         <div class="win-header">
-          <span>food</span>
+          <span>sushi</span>
           <svg class="win-close" width="20px" height="20px">
             <use href="#win-close-icon"></use>
           </svg>
@@ -219,6 +219,20 @@
       <div class="window" id="growth">
         <div class="win-header">
           <span>growth</span>
+          <svg class="win-close" width="20px" height="20px">
+            <use href="#win-close-icon"></use>
+          </svg>
+        </div>
+        <div class="win-content">
+          sample window content
+          <img src="../assets/images/early-adventures/pic1.jpg" />
+        </div>
+      </div>
+
+      <!-- memory lane -->
+      <div class="window" id="memory-lane">
+        <div class="win-header">
+          <span>memory lane</span>
           <svg class="win-close" width="20px" height="20px">
             <use href="#win-close-icon"></use>
           </svg>
@@ -314,17 +328,49 @@
         <div id="tabs">
           <div class="tab" id="start-tab">starthere.txt</div>
           <div class="tab" id="early-adventures-tab">early adventures</div>
+          <div class="tab" id="kaka24-tab">kaka24</div>
+          <div class="tab" id="kaka25-tab">kaka25</div>
+          <div class="tab" id="dance-tab">dance</div>
+          <div class="tab" id="sushi-tab">sushi</div>
+          <div class="tab" id="growth-tab">growth</div>
+          <div class="tab" id="memory-lane-tab">memory lane</div>
           <div class="tab" id="for-my-love-tab">formylove.txt</div>
         </div>
       </div>
 
       <!-- WIDGETS -->
-      <div id="widgets"></div>
+      <div id="widgets">
+        <!-- relationship timer -->
+        <div class="widget" id="timer">
+          <div class="widget-header">together time</div>
+          <div class="widget-body">
+            <div id="relationship-timer"></div>
+          </div>
+        </div>
+
+        <!-- music player -->
+        <div class="widget" id="music-player">
+          <div class="widget-header">now playing</div>
+          <div class="widget-body">
+            <div id="song-title">song title</div>
+
+            <audio id="audio-player"></audio>
+
+            <div class="controls">
+              <button id="prev-song">prev</button>
+              <button id="play-btn">play</button>
+              <button id="pause-btn">pause</button>
+              <button id="next-song">next</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="windows-container"></div>
 
     <script src="../src/desktop.js"></script>
+    <script src="../src/widgets.js"></script>
   </body>
 </html>
 

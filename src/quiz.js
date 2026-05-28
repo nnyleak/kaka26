@@ -102,4 +102,3 @@ function checkAnswer(selectedIndex) {
 }
 
 loadQuestion();
-
