@@ -5,6 +5,16 @@ const tabs = document.querySelectorAll(".tab");
 
 const allApps = new Map();
 
+const loadingText = document.getElementById("loading-text");
+const interval = setInterval(() => {
+    audio.play();
+    clearInterval(interval);
+    document.getElementById("loading-screen").style.opacity = "0";
+    return;
+}, 2000);
+
+// loading screen logic
+
 // make windows draggable
 function makeDraggable(win) {
   const header = win.querySelector(".win-header");
