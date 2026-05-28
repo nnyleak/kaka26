@@ -1,0 +1,171 @@
+:root {
+  font-family: "Gaegu", sans-serif;
+  --text-color: #3a2424;
+  --accent-color: #407492;
+
+  --bg-color: #3a2424;
+}
+
+html {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #407492 4px, rgba(0, 0, 0, 0) 1px);
+    background-color: #3a2424;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* DESKTOP */
+#desktop {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+}
+
+.desktop-icon {
+    width: 80px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+
+    padding: 10px;
+}
+
+.desktop-icon span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* WINDOW */
+/* .hidden {
+    display: none;
+} */
+
+.window {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    opacity: 0;
+    transform: scale(0.98);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    filter: brightness(0.75);
+
+    border: 2px solid black;
+    box-shadow: black -6px 7px 0px 0px;
+}
+
+.window.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.window.focused {
+    filter: brightness(1);
+}
+
+.win-header {
+    height: 40px;
+    background-color: #407492;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.win-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.win-close:hover {
+    background-color: rgb(150, 59, 59);
+}
+
+.win-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #211414;
+    color: white;
+    padding: 10px;
+    gap: 10px;
+
+    border-bottom: 10px solid #407492;
+    border-left: 10px solid #407492;
+    border-right: 10px solid #407492;
+}
+
+.win-content img {
+    width: 400px;
+}
+
+/* TASKBAR */
+#taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #265169;
+}
+
+#tabs {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.tab {
+    color: white;
+    font-size: 14px;
+    padding: 1rem;
+    display: none;
+    background-color: #2d5b73;
+    border-right: 1px solid black;
+    cursor: pointer;
+}
+
+.tab.active {
+    display: flex;
+    align-items: center;
+}
+
+.tab.focused {
+    background-color: var(--accent-color);
+}
+
+.start {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.start:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.taskbar-tab {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}

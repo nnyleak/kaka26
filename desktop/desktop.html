@@ -1,0 +1,151 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/desktop.css" />
+    <title>kaka26</title>
+  </head>
+  <body>
+    <!-- ICONS -->
+    <!-- note -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="note-icon" viewBox="0 0 24 24" fill="white">
+        <path
+          d="M17,18h4l-4,4ZM21,3V16H15v6H4a1,1,0,0,1-1-1V3A1,1,0,0,1,4,2H20A1,1,0,0,1,21,3ZM13,14a1,1,0,0,0-1-1H8a1,1,0,0,0,0,2h4A1,1,0,0,0,13,14Zm4-5a1,1,0,0,0-1-1H8a1,1,0,0,0,0,2h8A1,1,0,0,0,17,9Z"
+        />
+      </symbol>
+    </svg>
+
+    <!-- folder -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="folder-icon" viewBox="0 0 512 512" fill="white">
+        <g transform="translate(42.666667, 85.333333)">
+          <polygon
+            points="426.666667 341.333333 3.55271368e-14 341.333333 3.55271368e-14 1.42108547e-14 178.083413 1.42108547e-14 232.041813 42.6666667 426.666667 42.6666667"
+          ></polygon>
+        </g>
+      </symbol>
+    </svg>
+
+    <!-- window close -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="win-close-icon" viewBox="0 0 512 512" fill="white">
+        <g transform="translate(91.581722, 91.581722)">
+          <path
+            d="M298.666667,4.26325641e-14 L328.836556,30.1698893 L194.587,164.418 L328.836556,298.666667 L298.666667,328.836556 L164.418,194.587 L30.1698893,328.836556 L9.9475983e-14,298.666667 L134.248,164.418 L7.10542736e-14,30.1698893 L30.1698893,4.26325641e-14 L164.418,134.248 L298.666667,4.26325641e-14 Z"
+            transform="translate(164.418278, 164.418278) rotate(-360.000000) translate(-164.418278, -164.418278) "
+          ></path>
+        </g>
+      </symbol>
+    </svg>
+
+    <!-- DESKTOP -->
+    <div id="desktop">
+      <!-- WINDOWS -->
+      <div class="window" id="start">
+        <div class="win-header">
+          <span>start</span>
+          <svg class="win-close" width="20px" height="20px">
+            <use href="#win-close-icon"></use>
+          </svg>
+        </div>
+        <div class="win-content">
+          sample window content
+          <img src="../assets/images/early-adventures/pic1.jpg" />
+        </div>
+      </div>
+
+      <div class="window" id="early-adventures">
+        <div class="win-header">
+          <span>early adventures</span>
+          <svg class="win-close" width="20px" height="20px">
+            <use href="#win-close-icon"></use>
+          </svg>
+        </div>
+        <div class="win-content">
+          sample window content
+          <img src="../assets/images/early-adventures/pic1.jpg" />
+        </div>
+      </div>
+
+      <div class="window" id="for-my-love">
+        <div class="win-header">
+          <span>for my love</span>
+          <svg class="win-close" width="20px" height="20px">
+            <use href="#win-close-icon"></use>
+          </svg>
+        </div>
+        <div class="win-content">
+          sample window content
+          <img src="../assets/images/early-adventures/pic1.jpg" />
+        </div>
+      </div>
+
+      <!-- ICONS -->
+      <div id="icons">
+        <div class="desktop-icon" data-window="start">
+          <svg width="50px" height="50px">
+            <use href="#note-icon"></use>
+          </svg>
+          <span>starthere.txt</span>
+        </div>
+
+        <div class="desktop-icon" data-window="early-adventures">
+          <svg height="50px" width="50px">
+            <use href="#folder-icon"></use>
+          </svg>
+          <span>early adventures</span>
+        </div>
+
+        <div class="desktop-icon" data-window="for-my-love">
+          <svg height="50px" width="50px">
+            <use href="#note-icon"></use>
+          </svg>
+          <span>formylove.txt</span>
+        </div>
+      </div>
+
+      <!-- TASKBAR -->
+      <div id="taskbar">
+        <div id="tabs">
+            <div class="tab" id="start-tab">starthere.txt</div>
+            <div class="tab" id="early-adventures-tab">early adventures</div>
+            <div class="tab" id="for-my-love-tab">formylove.txt</div>
+        </div>
+      </div>
+
+      <!-- WIDGETS -->
+      <div id="widgets"></div>
+    </div>
+
+    <div class="windows-container"></div>
+
+    <script src="../src/desktop.js"></script>
+  </body>
+</html>
+
+<!-- some planning
+ folders:
+ - opening message (opens access to the rest of the folders)
+ - the start of us
+ - our first date + early adventures
+ - 1st anni
+ - 2nd anni
+ - facetime shenanigans
+ - food together! love trying new foods and places and cooking with you
+ - dancing together
+ - note about growing + maturing together
+ - fav selfies/memories together
+ - final love letter (ONLY after all other folders have been opened)
+
+ other:
+ - music in bg (w player)
+ - relationship stats timer (how long we've been together)
+ -->

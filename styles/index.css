@@ -28,7 +28,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: url(../assets/231-subtle-white-paper.webp) repeat;
+  background: url(../assets/images/231-subtle-white-paper.webp) repeat;
+  box-shadow: black 5px 5px 20px 0px;
 }
 
 h1 {
