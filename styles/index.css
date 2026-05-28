@@ -148,3 +148,26 @@ button:hover {
   height: auto;
   margin-bottom: 1rem;
 }
+
+.gift {
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift p {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+#gift-btn {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-style: italic;
+}
+
+#gift-btn:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}

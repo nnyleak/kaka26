@@ -66,6 +66,7 @@ let optionsEl = document.querySelector(".options");
 let submitBtn = document.querySelector(".submit-btn");
 let wrongEl = document.querySelector(".wrong-answer");
 let currentQuestionIndex = 0;
+let giftEl = document.querySelector(".gift");
 
 function loadQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
@@ -95,7 +96,8 @@ function checkAnswer(selectedIndex) {
     if (currentQuestionIndex < questions.length) {
         loadQuestion();
     } else {
-        alert("Congratulations! You've completed the quiz.");
+        quiz.style.display = "none";
+        giftEl.style.display = "flex";
     }
 }
 
