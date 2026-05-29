@@ -6,224 +6,287 @@
 }
 
 html {
-    background-size: 40px 40px;
-    background-image: radial-gradient(circle, #407492 4px, rgba(0, 0, 0, 0) 1px);
-    background-color: #3a2424;
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #407492 4px, rgba(0, 0, 0, 0) 1px);
+  background-color: #3a2424;
 }
 
 body {
-    margin: 0;
-    overflow: hidden;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
 }
 
+@font-face {
+  font-family: "digital-7 mono";
+  src: url("../assets/fonts/digital-7-mono.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* DESKTOP */
 #desktop {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    position: relative;
+  position: relative;
 }
 
 /* LOADING SCREEN */
 #loading-screen {
-    position: fixed;
-    inset: 0;
+  position: fixed;
+  inset: 0;
 
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    color:white;
-    z-index: 1000;
-    transition: all 0.5s ease;
+  color: white;
+  z-index: 1000;
+  transition: all 0.5s ease;
 }
 
 /* ICONS */
 #icons {
-    position: absolute;
-    right: 0px;
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
 }
 
 .desktop-icon {
-    width: 80px;
-    text-align: center;
-    color: white;
-    cursor: pointer;
+  width: 80px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
 
-    padding: 10px;
+  padding: 10px;
+}
+
+.desktop-icon svg {
+  width: 40px;
+  height: 40px;
+  fill: white;
 }
 
 .desktop-icon span {
-    display: block;
-    font-size: 11px;
-    margin-top: 5px;
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
 }
 
 .desktop-icon:hover {
-    background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 /* WINDOW */
 .window {
-    position: absolute;
-    top: 50px;
-    left: 50px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
 
-    opacity: 0;
-    transform: scale(0.98);
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 
-    filter: brightness(0.75);
+  filter: brightness(0.75);
 
-    border: 2px solid black;
-    box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .window.active {
-    opacity: 1;
-    transform: scale(1);
-    pointer-events: auto;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
 .window.focused {
-    filter: brightness(1);
+  filter: brightness(1);
 }
 
 .win-header {
-    height: 40px;
-    background-color: #407492;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
+  height: 30px;
+  background-color: #407492;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  cursor: move;
 }
 
 .win-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: white;
+  width: 20px;
+  height: 20px;
 }
 
 .win-close:hover {
-    background-color: rgb(150, 59, 59);
+  background-color: rgb(150, 59, 59);
 }
 
 .win-content {
-    display: flex;
-    flex-direction: column;
-    background-color: #211414;
-    color: white;
-    padding: 10px;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #211414;
+  color: white;
+  padding: 5px;
+  gap: 5px;
+  font-size: 14px;
 
-    border-bottom: 10px solid #407492;
-    border-left: 10px solid #407492;
-    border-right: 10px solid #407492;
+  border-bottom: 5px solid #407492;
+  border-left: 5px solid #407492;
+  border-right: 5px solid #407492;
 }
 
 .win-content img {
-    width: 400px;
+  width: 400px;
 }
 
 /* TASKBAR */
 #taskbar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 35px;
-    background-color: #265169;
-    display: flex;
-    flex-wrap: wrap;
-    border-top: 1px solid white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background-color: #265169;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid white;
 }
 
 #clock {
-    color:white;
-    font-size: 14px;
-    text-align: center;
-    border-right: 1px solid white;
-    padding: 0 1rem;
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    background-color: var(--accent-color);
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  border-right: 1px solid white;
+  padding: 0 1rem;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-color);
 }
 
 #tabs {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }
 
 .tab {
-    color: white;
-    font-size: 14px;
-    padding: 1rem;
-    display: none;
-    background-color: #2d5b73;
-    border-right: 1px solid white;
-    cursor: pointer;
+  color: white;
+  font-size: 14px;
+  padding: 1rem;
+  display: none;
+  background-color: #2d5b73;
+  border-right: 1px solid white;
+  cursor: pointer;
 }
 
 .tab.active {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .tab.focused {
-    background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .taskbar-tab {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 /* WIDGETS */
 #widgets {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    margin: 1rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 1rem;
+  gap: 1rem;
 }
 
 .widget {
-    
-    width: 200px;
-    color: white;
-    background-color: #211414;
-    border: 2px solid black;
-    box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  color: white;
+  background-color: #211414;
+  border: 2px solid black;
+  box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .widget-header {
-    height: 30px;
-    background-color: var(--accent-color);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 14px;
+  height: 25px;
+  background-color: var(--accent-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .widget-body {
-    padding: 10px;
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* timer */
+#relationship-timer {
+  font-family: "digital-7 mono", monospace;
+  text-align: center;
+  font-size: 50px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #69a3c5;
+}
+
+.peepee {
+  opacity: 0.1;
+}
+
+.hours,
+.mins,
+.secs {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  height: 50px;
+  width: 45px;
+}
+
+.days {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: 50px;
+}
+
+.real {
+  position: absolute;
+}
+
+.colon {
+  width: 18px;
 }

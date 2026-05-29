@@ -3,8 +3,8 @@ const startDate = new Date("2023-06-11T00:00:00");
 
 const songs = [
   {
-    title: "rewind by twice",
-    src: "../assets/music/rewind-twice.mp3"
+    title: "oishinbo ds recipe main theme",
+    src: "../assets/music/oishinbo-ds-recipe-main-theme.mp3"
   },
   {
     title: "look by red velvet",
@@ -13,10 +13,6 @@ const songs = [
   {
     title: "miniskirt by aoa",
     src: "../assets/music/miniskirt-aoa.mp3"
-  },
-  {
-    title: "nintendogs main theme",
-    src: "../assets/music/nintendogs-main-theme.mp3"
   },
   {
     title: "polaroid love by enhypen",
@@ -31,10 +27,6 @@ const songs = [
     src: "../assets/music/suddenly-ioi.mp3"
   },
   {
-    title: "oishinbo ds recipe main theme",
-    src: "../assets/music/oishinbo-ds-recipe-main-theme.mp3"
-  },
-  {
     title: "not cute anymore by illit",
     src: "../assets/music/not-cute-anymore-illit.mp3"
   }
@@ -44,6 +36,10 @@ const audio = document.getElementById("audio-player");
 const songTitle = document.getElementById("song-title");
 
 // TIMER
+function pad(num) {
+  return String(num).padStart(2, "0");
+}
+
 function updateTimer() {
   const now = new Date();
   const diff = now - startDate;
@@ -53,8 +49,10 @@ function updateTimer() {
   const hours = Math.floor(mins / 60);
   const days = Math.floor(hours / 24);
 
-  document.getElementById("relationship-timer").innerText =
-    `${days}d, ${hours % 24}h, ${mins % 60}m, ${seconds % 60}s`;
+  document.getElementById("widget-days").innerText = pad(days);
+  document.getElementById("widget-hours").innerText = pad(hours % 24);
+  document.getElementById("widget-mins").innerText = pad(mins % 60);
+  document.getElementById("widget-secs").innerText = pad(seconds % 60);
 }
 
 setInterval(updateTimer, 1000);
