@@ -5,13 +5,16 @@ const tabs = document.querySelectorAll(".tab");
 
 const allApps = new Map();
 
+const openSfx = new Audio("../assets/sfx/windows-xp-start.wav");
+const closeSfx = new Audio("../assets/sfx/windows-xp-minimize.wav");
+
 // loading screen logic
 const loadingText = document.getElementById("loading-text");
 const interval = setInterval(() => {
-    audio.play();
-    clearInterval(interval);
-    document.getElementById("loading-screen").style.display = "none";
-    return;
+  audio.play();
+  clearInterval(interval);
+  document.getElementById("loading-screen").style.display = "none";
+  return;
 }, 2000);
 
 // make windows draggable
@@ -73,6 +76,9 @@ function openApp(id) {
 
   focusWindow(app.win);
   focusTab(app.tab);
+
+  openSfx.currentTime = 0;
+  openSfx.play();
 }
 
 // close app by id
@@ -83,6 +89,9 @@ function closeApp(id) {
 
   app.win.classList.remove("active");
   app.tab.classList.remove("active");
+
+  closeSfx.currentTime = 0;
+  closeSfx.play();
 }
 
 // initialize windows
@@ -128,11 +137,14 @@ tabs.forEach((tab) => {
 
 // taskbar clock
 function updateClock() {
-    const now = new Date();
+  const now = new Date();
 
-    const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const time = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
-    document.getElementById("clock").innerText = time;
+  document.getElementById("clock").innerText = time;
 }
 
 setInterval(updateClock, 1000);
