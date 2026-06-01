@@ -379,116 +379,131 @@
 
       <!-- WIDGETS -->
       <div id="widgets">
-        <!-- relationship timer -->
-        <div class="widget" id="timer">
-          <div class="widget-body">
-            <div id="relationship-timer">
-              <div class="time days">
-                <div class="peepee">8888</div>
-                <div class="real" id="widget-days"></div>
-              </div>
-              <div class="colon">:</div>
-              <div class="time hours">
-                <div class="peepee">88</div>
-                <div class="real" id="widget-hours"></div>
-              </div>
-              <div class="colon">:</div>
-              <div class="time mins">
-                <div class="peepee">88</div>
-                <div class="real" id="widget-mins"></div>
-              </div>
-              <div class="colon">:</div>
-              <div class="time secs">
-                <div class="peepee">88</div>
-                <div class="real" id="widget-secs"></div>
+        <div class="widget-row">
+          <!-- relationship timer -->
+          <div class="widget" id="timer">
+            <div class="widget-body">
+              <div id="relationship-timer">
+                <div class="time days">
+                  <div class="peepee">8888</div>
+                  <div class="real" id="widget-days"></div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time hours">
+                  <div class="peepee">88</div>
+                  <div class="real" id="widget-hours"></div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time mins">
+                  <div class="peepee">88</div>
+                  <div class="real" id="widget-mins"></div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time secs">
+                  <div class="peepee">88</div>
+                  <div class="real" id="widget-secs"></div>
+                </div>
               </div>
             </div>
+            <div class="widget-header">𑣲⋆ happy 3 years my love ❤︎₊ ⊹</div>
           </div>
-          <div class="widget-header">𑣲⋆ happy 3 years my love ❤︎₊ ⊹</div>
         </div>
 
-        <!-- music player -->
-        <div class="widget" id="music-player">
-          <div class="widget-body">
-            <div id="song-cover"><img id="song-cover-img" /></div>
-            <div id="song-info">
-              <div id="song-title">song title</div>
-              <div id="song-artist">song artist</div>
-            </div>
-
-            <audio id="audio-player"></audio>
-
-            <div id="progress-bar">
-              <div id="bar-box">
-                <div id="current-bar"></div>
+        <div class="widget-row">
+          <!-- music player -->
+          <div class="widget" id="music-player">
+            <div class="widget-body">
+              <div id="song-cover"><img id="song-cover-img" /></div>
+              <div id="song-info">
+                <div id="song-title">song title</div>
+                <div id="song-artist">song artist</div>
               </div>
-              <div id="time-info">
-                <p id="current-time">0:00</p>
-                <p id="full-time">3:00</p>
+
+              <audio id="audio-player"></audio>
+
+              <div id="progress-bar">
+                <div id="bar-box">
+                  <div id="current-bar"></div>
+                </div>
+                <div id="time-info">
+                  <p id="current-time">0:00</p>
+                  <p id="full-time">3:00</p>
+                </div>
+              </div>
+
+              <div class="controls">
+                <svg id="prev-btn" class="control-icon">
+                  <use href="#skip-icon"></use>
+                </svg>
+
+                <svg id="play-pause-btn" class="control-icon">
+                  <use href="#play-icon"></use>
+                </svg>
+
+                <svg id="next-btn" class="control-icon">
+                  <use href="#skip-icon"></use>
+                </svg>
               </div>
             </div>
-
-            <div class="controls">
-              <svg id="prev-btn" class="control-icon">
-                <use href="#skip-icon"></use>
-              </svg>
-
-              <svg id="play-pause-btn" class="control-icon">
-                <use href="#play-icon"></use>
-              </svg>
-
-              <svg id="next-btn" class="control-icon">
-                <use href="#skip-icon"></use>
-              </svg>
-            </div>
+            <div class="widget-header">now playing ♬⋆.˚</div>
           </div>
-          <div class="widget-header">now playing ♬⋆.˚</div>
+
+          <!-- stats -->
+          <div class="widget" id="stats">
+            <div class="widget-body">
+              <div class="stat">
+                <span class="stat-info">
+                  LOVE.EXE
+                  <span id="love-text">100%</span>
+                </span>
+                <div class="stat-bar">
+                  <div class="stat-fill" id="love-fill"></div>
+                </div>
+              </div>
+
+              <div class="stat">
+                <span class="stat-info">
+                  H4PP1N3SS.SYS
+                  <span id="happy-text">100%</span>
+                </span>
+                <div class="stat-bar">
+                  <div class="stat-fill" id="happy-fill"></div>
+                </div>
+              </div>
+
+              <div class="stat">
+                <span class="stat-info">
+                  bebi-appreciation.dll
+                  <span id="bebi-text">100%</span>
+                </span>
+                <div class="stat-bar">
+                  <div class="stat-fill" id="bebi-fill"></div>
+                </div>
+              </div>
+
+              <div class="stat">
+                <span class="stat-info">
+                  FUTURE-PLANS.bat
+                  <span id="future-text">100%</span>
+                </span>
+                <div class="stat-bar">
+                  <div class="stat-fill" id="future-fill"></div>
+                </div>
+              </div>
+            </div>
+            <div class="widget-header">system</div>
+          </div>
         </div>
 
-        <!-- stats -->
-        <div class="widget" id="stats">
-          <div class="widget-body">
-            <div class="stat">
-              <span class="stat-info">
-                LOVE.EXE
-                <span id="love-text">100%</span>
-              </span>
-              <div class="stat-bar">
-                <div class="stat-fill" id="love-fill"></div>
-              </div>
+        <div class="widget-row">
+          <!-- photo slideshow -->
+          <div class="widget" id="memory-slideshow">
+            <div class="widget-body">
+              <img src="" id="mem-photo">
+              <div id="mem-caption">sample caption</div>
             </div>
-
-            <div class="stat">
-              <span class="stat-info">
-                H4PP1N3SS.SYS
-                <span id="happy-text">100%</span>
-              </span>
-              <div class="stat-bar">
-                <div class="stat-fill" id="happy-fill"></div>
-              </div>
-            </div>
-
-            <div class="stat">
-              <span class="stat-info">
-                bebi-appreciation.dll
-                <span id="bebi-text">100%</span>
-              </span>
-              <div class="stat-bar">
-                <div class="stat-fill" id="bebi-fill"></div>
-              </div>
-            </div>
-
-            <div class="stat">
-              <span class="stat-info">
-                FUTURE-PLANS.bat
-                <span id="future-text">100%</span>
-              </span>
-              <div class="stat-bar">
-                <div class="stat-fill" id="future-fill"></div>
-              </div>
-            </div>
+            <div class="widget-header">memories</div>
           </div>
-          <div class="widget-header">system</div>
         </div>
       </div>
     </div>

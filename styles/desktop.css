@@ -4,10 +4,12 @@
 
   --bg-color: #3a2424;
 
-  background-image: 
+  background-image:
     radial-gradient(rgb(64, 116, 146) 11.2%, transparent 15.6%),
     radial-gradient(rgb(64, 116, 146) 11.2%, transparent 15.6%);
-  background-position: 0px 0px, 16px 16px;
+  background-position:
+    0px 0px,
+    16px 16px;
   background-size: 32px 32px;
   background-color: rgb(58, 36, 36);
 }
@@ -248,6 +250,13 @@ body {
   left: 0px;
   margin: 1rem;
   gap: 1rem;
+  width: fit-content;
+}
+
+.widget-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .widget {
@@ -395,52 +404,72 @@ body {
 }
 
 .control-icon {
-    width: 20px;
-    height: 20px;
-    fill: white;
-    cursor: pointer;
-    transition: 0.15s;
+  width: 20px;
+  height: 20px;
+  fill: white;
+  cursor: pointer;
+  transition: 0.15s;
 }
 
 .control-icon:hover {
-    fill: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 #prev-btn {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 #play-btn {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 }
 
 /* SYSTEM STATS */
 #stats {
-    font-family: "Inconsolata", monospace;
+  width: 250px;
+  height: fit-content;
 }
 
 .stat {
-    margin-bottom: 10px;
+  font-family: "Inconsolata", monospace;
+  margin-bottom: 10px;
 }
 
 .stat-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 10px;
-    font-size: 10px;
-    margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 10px;
+  font-size: 10px;
+  margin-bottom: 5px;
 }
 
 .stat-bar {
-    height: 4px;
-    background-color: #40749266;
+  height: 4px;
+  background-color: #40749266;
 }
 
 .stat-fill {
-    height: 100%;
-    background-color: var(--accent-color);
-    width: 50%;
-    transition: width 1.5s ease;
+  height: 100%;
+  background-color: var(--accent-color);
+  width: 50%;
+  transition: width 1.5s ease;
+}
+
+/* PHOTO SLIDESHOW */
+
+#mem-photo {
+  height: 150px;
+
+  border: 1px solid white;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+#mem-caption {
+    font-size: 10px;
+    margin-top: 5px;
+    text-align: center;
 }

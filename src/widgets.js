@@ -57,6 +57,25 @@ const currentTime = document.getElementById("current-time");
 const fullTime = document.getElementById("full-time");
 const barBox = document.getElementById("bar-box");
 
+const memPhotos = [
+  {
+    image: "../assets/images/mem-widget/pic1.jpg",
+    caption: "caption 1",
+  },
+  {
+    image: "../assets/images/mem-widget/pic2.jpg",
+    caption: "caption 2",
+  },
+  {
+    image: "../assets/images/mem-widget/pic3.jpg",
+    caption: "caption 3",
+  },
+];
+const memPhoto = document.getElementById("mem-photo");
+const memCaption = document.getElementById("mem-caption");
+let currentMem = 0;
+const shuffledMems = [...memPhotos].sort(() => Math.random() - 0.5);
+
 // TIMER
 function pad(num) {
   return String(num).padStart(2, "0");
@@ -179,11 +198,11 @@ audio.addEventListener("ended", nextSong);
 loadSong(currentSong);
 
 // SYSTEM STATS
-function updateStatBar(id, textId,min, max) {
+function updateStatBar(id, textId, min, max) {
   const fill = document.getElementById(id);
   const percent = document.getElementById(textId);
 
-  const value = Math.floor(Math.random() * (max-min+1)) + min;
+  const value = Math.floor(Math.random() * (max - min + 1)) + min;
 
   fill.style.width = `${value}%`;
   percent.innerText = `${value}%`;
@@ -199,3 +218,20 @@ function updateStats() {
 
 updateStats();
 setInterval(updateStats, 2500);
+
+// PHOTO SLIDESHOW
+function nextPhoto() {
+  const mem = shuffledMems[currentMem];
+
+  memPhoto.src = mem.image;
+  memCaption.innerText = mem.caption;
+
+  currentMem++;
+
+  if (currentMem >= shuffledMems.length) {
+    currentMem = 0;
+  }
+}
+
+nextPhoto();
+setInterval(nextPhoto, 5000);
