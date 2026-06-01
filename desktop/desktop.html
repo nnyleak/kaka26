@@ -12,7 +12,7 @@
     <title>kaka26</title>
   </head>
   <body>
-    <!-- ICONS -->
+    <!-- SVG ICONS -->
     <!-- note -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <symbol id="note-icon" viewBox="0 0 24 24">
@@ -127,6 +127,29 @@
       </symbol>
     </svg>
 
+    <!-- play -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="play-icon" viewBox="0 0 32 32">
+        <path class="sharpcorners_een" d="M23,16L9,26V6L23,16z" />
+      </symbol>
+    </svg>
+
+    <!-- pause -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="pause-icon" viewBox="0 0 32 32">
+        <path d="M18.432 7.5h4.547v17h-4.547zM9.022 7.5h4.545v17H9.022z" />
+      </symbol>
+    </svg>
+
+    <!-- skip -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="skip-icon" viewBox="0 0 32 32">
+        <path
+          d="M19,16L7,26V6L19,16z M13,6v3.698L20.562,16L13,22.302V26l12-10L13,6z"
+        />
+      </symbol>
+    </svg>
+
     <!-- DESKTOP -->
     <div id="desktop">
       <!-- LOADING SCREEN -->
@@ -144,8 +167,13 @@
           </svg>
         </div>
         <div class="win-content">
-          sample window content
-          <img src="../assets/images/early-adventures/pic1.jpg" />
+          <div class="content-body">
+            sample window content
+            <img src="../assets/images/early-adventures/pic1.jpg" />
+            <img src="../assets/images/early-adventures/pic1.jpg" />
+            <img src="../assets/images/early-adventures/pic1.jpg" />
+            <img src="../assets/images/early-adventures/pic1.jpg" />
+          </div>
         </div>
       </div>
 
@@ -153,7 +181,7 @@
       <div class="window" id="early-adventures">
         <div class="win-header">
           <span>early adventures</span>
-          <svg class="win-close" >
+          <svg class="win-close">
             <use href="#win-close-icon"></use>
           </svg>
         </div>
@@ -263,13 +291,6 @@
 
       <!-- ICONS -->
       <div id="icons">
-        <div class="desktop-icon" data-window="start">
-          <svg>
-            <use href="#note-icon"></use>
-          </svg>
-          <span>starthere.txt</span>
-        </div>
-
         <div class="desktop-icon" data-window="early-adventures">
           <svg>
             <use href="#folder-icon"></use>
@@ -325,6 +346,13 @@
           </svg>
           <span>formylove.txt</span>
         </div>
+
+        <div class="desktop-icon" data-window="start">
+          <svg>
+            <use href="#note-icon"></use>
+          </svg>
+          <span>starthere.txt</span>
+        </div>
       </div>
 
       <!-- TASKBAR -->
@@ -370,30 +398,71 @@
               </div>
             </div>
           </div>
-          <div class="widget-header">happy 3 years my love ♡</div>
+          <div class="widget-header">𑣲⋆ happy 3 years my love ❤︎₊ ⊹</div>
         </div>
 
         <!-- music player -->
         <div class="widget" id="music-player">
           <div class="widget-body">
-            <div id="song-title">song title</div>
+            <div id="song-cover"><img id="song-cover-img" /></div>
+            <div id="song-info">
+              <div id="song-title">song title</div>
+              <div id="song-artist">song artist</div>
+            </div>
 
             <audio id="audio-player"></audio>
 
+            <div id="progress-bar">
+              <div id="bar-box">
+                <div id="current-bar"></div>
+              </div>
+              <div id="time-info">
+                <p id="current-time">0:00</p>
+                <p id="full-time">3:00</p>
+              </div>
+            </div>
+
             <div class="controls">
-              <button id="prev-song">prev</button>
-              <button id="play-btn">play</button>
-              <button id="pause-btn">pause</button>
-              <button id="next-song">next</button>
+              <svg id="prev-btn" class="control-icon">
+                <use href="#skip-icon"></use>
+              </svg>
+
+              <svg id="play-pause-btn" class="control-icon">
+                <use href="#play-icon"></use>
+              </svg>
+
+              <svg id="next-btn" class="control-icon">
+                <use href="#skip-icon"></use>
+              </svg>
             </div>
           </div>
-          <div class="widget-header">now playing</div>
+          <div class="widget-header">now playing ♬⋆.˚</div>
         </div>
 
         <!-- stats -->
         <div class="widget" id="stats">
-          <div class="widget-body"></div>
-          <div class="widget-header">relationship stats</div>
+          <div class="widget-body">
+            <div class="stat">
+              <span>love.exe</span>
+              <div class="stat-fill" id="love-fill"></div>
+            </div>
+
+            <div class="stat">
+              <span>happiness</span>
+              <div class="stat-fill" id="happy-fill"></div>
+            </div>
+
+            <div class="stat">
+              <span>bebi appreciation</span>
+              <div class="stat-fill" id="bebi-fill"></div>
+            </div>
+
+            <div class="stat">
+              <span>future plans</span>
+              <div class="stat-fill" id="future-fill"></div>
+            </div>
+          </div>
+          <div class="widget-header">system</div>
         </div>
       </div>
     </div>
