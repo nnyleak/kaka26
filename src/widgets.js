@@ -177,3 +177,25 @@ audio.addEventListener("ended", nextSong);
 
 // load first song
 loadSong(currentSong);
+
+// SYSTEM STATS
+function updateStatBar(id, textId,min, max) {
+  const fill = document.getElementById(id);
+  const percent = document.getElementById(textId);
+
+  const value = Math.floor(Math.random() * (max-min+1)) + min;
+
+  fill.style.width = `${value}%`;
+  percent.innerText = `${value}%`;
+}
+
+// update stats every few seconds
+function updateStats() {
+  updateStatBar("love-fill", "love-text", 96, 100);
+  updateStatBar("happy-fill", "happy-text", 85, 100);
+  updateStatBar("bebi-fill", "bebi-text", 98, 100);
+  updateStatBar("future-fill", "future-text", 75, 95);
+}
+
+updateStats();
+setInterval(updateStats, 2500);

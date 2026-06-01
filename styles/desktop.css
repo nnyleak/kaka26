@@ -270,10 +270,6 @@ body {
 .widget-body {
   font-size: 12px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
 }
 
 /* timer */
@@ -335,6 +331,7 @@ body {
 
 #song-info {
   width: 100%;
+  padding-top: 10px;
 }
 
 #song-title {
@@ -353,7 +350,7 @@ body {
   align-items: center;
 
   width: 100%;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 #bar-box {
@@ -393,6 +390,8 @@ body {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .control-icon {
@@ -414,4 +413,34 @@ body {
 #play-btn {
     width: 15px;
     height: 15px;
+}
+
+/* SYSTEM STATS */
+#stats {
+    font-family: "Inconsolata", monospace;
+}
+
+.stat {
+    margin-bottom: 10px;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 10px;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.stat-bar {
+    height: 4px;
+    background-color: #40749266;
+}
+
+.stat-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    width: 50%;
+    transition: width 1.5s ease;
 }
