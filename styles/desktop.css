@@ -457,11 +457,8 @@ body {
 }
 
 /* PHOTO SLIDESHOW */
-
 #mem-photo {
   height: 150px;
-
-  border: 1px solid white;
 
   transition:
     opacity 0.5s ease,
