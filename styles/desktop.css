@@ -474,7 +474,7 @@ body {
 
 /* INDIVIDUAL WINDOWS */
 /* starthere.txt */
-#start #intro {
+#intro {
   font-family: "Inconsolata", monospace;
   border: 1px solid white;
   padding: 15px;
@@ -483,7 +483,7 @@ body {
   justify-content: center;
 }
 
-#start #intro span {
+#intro span {
   color: #69a3c5;
   font-style: italic;
 }
@@ -505,4 +505,9 @@ body {
     font-style: italic;
     opacity: 0.5;
     font-size: 9px;
+}
+
+/* early adventures */
+#early-adventures .adv-title {
+    border-bottom: 1px solid #69a3c5;
 }
