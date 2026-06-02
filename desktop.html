@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="styles/desktop.css" />
     <title>kaka26</title>
+    <script type="text/javascript" src="src/cursor-trail.js"></script>
   </head>
   <body>
     <!-- SVG ICONS -->
@@ -172,9 +173,9 @@
             <use href="#win-close-icon"></use>
           </svg>
         </div>
-        <div class="win-content" style="width: 300px">
-          <div class="content-body">
-            <div id="intro">
+        <div class="win-content">
+          <div class="content-body letter">
+            <div class="intro">
               ── .✦ welcome to <span>kaka26-os v3.0</span><br /><br />
               ── .✦ user: <span>bebi</span><br /><br />
               ── .✦ last login: <span>06.11.2026</span><br /><br />
@@ -182,7 +183,7 @@
               ── .✦ restored!
             </div>
 
-            <div id="start-letter">
+            <div class="letter-content">
               ── .✦ <span>happy 3 year anniversary my love!!!</span><br /><br />
               introducing the "nothing" i've been working on LOL!<br /><br />
               i hope you like this little place i made for the two of us :) just
@@ -195,9 +196,9 @@
               ♡ kae
             </div>
 
-            <div id="start-img">
+            <div class="letter-img">
               <img src="assets/images/start/start.jpg" />
-              <span>05.03.2026</span>
+              <span class="img-date">05.03.2026</span>
             </div>
           </div>
         </div>
@@ -211,25 +212,67 @@
             <use href="#win-close-icon"></use>
           </svg>
         </div>
-        <div class="win-content" style="width: 500px">
-          <div class="content-body">
-            ahhh, our first year together... hehe. the pre-dating denial, the honeymoon phase, the taco-bell-every-day phase... this year was def crazy!
-            <!-- title -> some photos -> notes/descriptions -->
-            <!-- maybe 5-ish adventures? -->
-            <!-- final message -->
-
+        <div class="win-content">
+          <div class="content-body carousels">
             <div class="section">
-              <div class="adv-title">adventure 01</div>
-              <div class="adv-content">
-                <img src="assets/images/start/start.jpg">
-                caption
+              ahhh, our first year together... hehe. the pre-dating denial, the
+              honeymoon phase, the taco-bell-every-day phase... this year was
+              def crazy!
+            </div>
+            <div class="section">
+              <div class="sec-title">
+                ── .✦ the pining for each other was crazy
+              </div>
+              <div class="sec-carousel">
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                  <span class="img-caption"
+                    >sample caption sample sample sample sample</span
+                  >
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
               </div>
             </div>
             <div class="section">
-              <div class="adv-title">adventure 02</div>
-              <div class="adv-content">
-                
+              <div class="sec-title">── .✦ getting to know each other :)</div>
+              <div class="sec-carousel">
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                  <span class="img-caption"
+                    >sample caption sample sample sample sample</span
+                  >
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
               </div>
+            </div>
+            <div class="section">
+              <div class="sec-title">── .✦ the start of forever :3</div>
+              our first year as a couple was def interesting, being each other's
+              firsts with a LOT of things. we survived college together and
+              learned to be comfortable in each other's presence. it was hard
+              and we were definitely childish and clingy to the MAX (actually
+              that was probably just me), but that's the start of every
+              relationship! i remember just being so in love with you, and
+              overjoyed that i could love someone for REAL. every day was a
+              dream, and i seriously miss being able to fall asleep and wake up
+              next to you each morning. i'm proud of us for making it through
+              this year and sticking together through thick and thin.
             </div>
           </div>
         </div>
@@ -244,18 +287,26 @@
           </svg>
         </div>
         <div class="win-content">
-          <div class="content-body">
-            <!-- what we did for our first anni -->
-            <!-- my thoughts on that year -->
-            <!-- achievements? -->
-            <div id="intro">
+          <div class="content-body gallery">
+            <div class="intro">
               ── .✦ <span>kaka24-os v1.0</span><br /><br />
               ── .✦ date: <span>06.11.2024</span><br /><br />
-              ── .✦ new features:<br />
-              ── .✦ feature1<br />
-              ── .✦ feature2<br />
-              ── .✦ feature3<br />
+              ── .✦ achievements:<br />
+              ── .✦ survived stressful semesters<br />
+              ── .✦ stopped being nervous around each other<br />
+              ── .✦ learned each other's favorite things<br />
             </div>
+            <div class="gal-header">gallery</div>
+            <div class="gallery-imgs">
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+            </div>
+            <div class="gal-header">thoughts</div>
+            hello these are my thoughts
           </div>
         </div>
       </div>
@@ -269,9 +320,9 @@
           </svg>
         </div>
         <div class="win-content">
-          <div class="content-body">
+          <div class="content-body gallery">
             <!-- same as kaka24 -->
-            <div id="intro">
+            <div class="intro">
               ── .✦ <span>kaka25-os v2.0</span><br /><br />
               ── .✦ date: <span>06.11.2025</span><br /><br />
               ── .✦ new features:<br />
@@ -279,6 +330,17 @@
               ── .✦ feature2<br />
               ── .✦ feature3<br />
             </div>
+            <div class="gal-header">gallery</div>
+            <div class="gallery-imgs">
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+            </div>
+            <div class="gal-header">thoughts</div>
+            hello these are my thoughts
           </div>
         </div>
       </div>
@@ -292,11 +354,71 @@
           </svg>
         </div>
         <div class="win-content">
-          <div class="content-body">
-            <!-- short note about dancing together -->
-            <!-- being supportive in nova -->
-            <!-- wanting to be supportive for ang3lz -->
-            <!-- some fav photos/clips of our time dancing together -->
+          <!-- short note about dancing together -->
+          <!-- being supportive in nova -->
+          <!-- wanting to be supportive for ang3lz -->
+          <!-- some fav photos/clips of our time dancing together -->
+          <div class="content-body carousels">
+            <div class="section">
+              ahhh, our first year together... hehe. the pre-dating denial, the
+              honeymoon phase, the taco-bell-every-day phase... this year was
+              def crazy!
+            </div>
+            <div class="section">
+              <div class="sec-title">
+                ── .✦ the pining for each other was crazy
+              </div>
+              <div class="sec-carousel">
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                  <span class="img-caption"
+                    >sample caption sample sample sample sample</span
+                  >
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="sec-title">── .✦ getting to know each other :)</div>
+              <div class="sec-carousel">
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                  <span class="img-caption"
+                    >sample caption sample sample sample sample</span
+                  >
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="sec-title">── .✦ the start of forever :3</div>
+              our first year as a couple was def interesting, being each other's
+              firsts with a LOT of things. we survived college together and
+              learned to be comfortable in each other's presence. it was hard
+              and we were definitely childish and clingy to the MAX (actually
+              that was probably just me), but that's the start of every
+              relationship! i remember just being so in love with you, and
+              overjoyed that i could love someone for REAL. every day was a
+              dream, and i seriously miss being able to fall asleep and wake up
+              next to you each morning. i'm proud of us for making it through
+              this year and sticking together through thick and thin.
+            </div>
           </div>
         </div>
       </div>
@@ -310,9 +432,29 @@
           </svg>
         </div>
         <div class="win-content">
-          <div class="content-body">
-            sample window content
-            <img src="assets/images/early-adventures/pic1.jpg" />
+          <div class="content-body gallery">
+            we eat so much food together!!! just two big backs i guess
+            <div class="gallery-imgs" id="sushi-gallery">
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+              <img src="assets/images/start/start.jpg" />
+            </div>
           </div>
         </div>
       </div>
@@ -326,9 +468,32 @@
           </svg>
         </div>
         <div class="win-content">
-          <div class="content-body">
-            sample window content
-            <img src="assets/images/early-adventures/pic1.jpg" />
+          <div class="content-body letter">
+            <div class="intro">
+              ── .✦ welcome to <span>kaka26-os v3.0</span><br /><br />
+              ── .✦ user: <span>bebi</span><br /><br />
+              ── .✦ last login: <span>06.11.2026</span><br /><br />
+              ── .✦ loading...<br /><br />
+              ── .✦ restored!
+            </div>
+
+            <div class="letter-content">
+              ── .✦ <span>happy 3 year anniversary my love!!!</span><br /><br />
+              introducing the "nothing" i've been working on LOL!<br /><br />
+              i hope you like this little place i made for the two of us :) just
+              somewhere where we can reminisce and remember all the fun memories
+              and adventures we have together. i worked super hard on it because
+              i love you so much and i'm always willing to go the extra mile for
+              you. i'm so grateful to have you by my side.<br /><br />
+              click around and explore! i'm probably sitting right next to you
+              lol so i can see your reactions hehehe. enjoy my love :)<br /><br />
+              ♡ kae
+            </div>
+
+            <div class="letter-img">
+              <img src="assets/images/start/start.jpg" />
+              <span class="img-date">05.03.2026</span>
+            </div>
           </div>
         </div>
       </div>
@@ -342,9 +507,67 @@
           </svg>
         </div>
         <div class="win-content">
-          <div class="content-body">
-            sample window content
-            <img src="assets/images/early-adventures/pic1.jpg" />
+          <div class="content-body carousels">
+            <div class="section">
+              ahhh, our first year together... hehe. the pre-dating denial, the
+              honeymoon phase, the taco-bell-every-day phase... this year was
+              def crazy!
+            </div>
+            <div class="section">
+              <div class="sec-title">
+                ── .✦ the pining for each other was crazy
+              </div>
+              <div class="sec-carousel">
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                  <span class="img-caption"
+                    >sample caption sample sample sample sample</span
+                  >
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="sec-title">── .✦ getting to know each other :)</div>
+              <div class="sec-carousel">
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                  <span class="img-caption"
+                    >sample caption sample sample sample sample</span
+                  >
+                </div>
+                <div class="carousel-img">
+                  <img src="assets/images/start/start.jpg" />
+                  <span class="img-date">06.11.2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="sec-title">── .✦ the start of forever :3</div>
+              our first year as a couple was def interesting, being each other's
+              firsts with a LOT of things. we survived college together and
+              learned to be comfortable in each other's presence. it was hard
+              and we were definitely childish and clingy to the MAX (actually
+              that was probably just me), but that's the start of every
+              relationship! i remember just being so in love with you, and
+              overjoyed that i could love someone for REAL. every day was a
+              dream, and i seriously miss being able to fall asleep and wake up
+              next to you each morning. i'm proud of us for making it through
+              this year and sticking together through thick and thin.
+            </div>
           </div>
         </div>
       </div>
@@ -358,9 +581,32 @@
           </svg>
         </div>
         <div class="win-content">
-          <div class="content-body">
-            sample window content
-            <img src="assets/images/early-adventures/pic1.jpg" />
+          <div class="content-body letter">
+            <div class="intro">
+              ── .✦ welcome to <span>kaka26-os v3.0</span><br /><br />
+              ── .✦ user: <span>bebi</span><br /><br />
+              ── .✦ last login: <span>06.11.2026</span><br /><br />
+              ── .✦ loading...<br /><br />
+              ── .✦ restored!
+            </div>
+
+            <div class="letter-content">
+              ── .✦ <span>happy 3 year anniversary my love!!!</span><br /><br />
+              introducing the "nothing" i've been working on LOL!<br /><br />
+              i hope you like this little place i made for the two of us :) just
+              somewhere where we can reminisce and remember all the fun memories
+              and adventures we have together. i worked super hard on it because
+              i love you so much and i'm always willing to go the extra mile for
+              you. i'm so grateful to have you by my side.<br /><br />
+              click around and explore! i'm probably sitting right next to you
+              lol so i can see your reactions hehehe. enjoy my love :)<br /><br />
+              ♡ kae
+            </div>
+
+            <div class="letter-img">
+              <img src="assets/images/start/start.jpg" />
+              <span class="img-date">05.03.2026</span>
+            </div>
           </div>
         </div>
       </div>

@@ -473,8 +473,102 @@ body {
 }
 
 /* INDIVIDUAL WINDOWS */
-/* starthere.txt */
-#intro {
+/* letter-style window */
+/* includes starthere.txt, growth, formylove.txt */
+.letter {
+  width: 300px;
+}
+
+.letter-content span {
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+  color: #69a3c5;
+}
+
+.letter-img img {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* carousel windows */
+/* includes early adventures, dance, memory lane */
+.carousels {
+  width: 500px;
+}
+
+.sec-title {
+  border-bottom: 1px solid #69a3c5;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  color: #69a3c5;
+}
+
+.sec-carousel {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  gap: 10px;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+}
+
+.sec-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sec-carousel::-webkit-scrollbar-track {
+  background: #211414;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #211414;
+}
+
+.sec-carousel::-webkit-scrollbar-thumb {
+  background: #62a2c7;
+  border: 1px solid #211414;
+}
+
+.carousel-img img {
+  height: 150px;
+  width: auto;
+  padding-bottom: 5px;
+}
+
+/* gallery windows */
+/* includes kaka24, kaka25, sushi */
+.gallery {
+  width: 450px;
+}
+
+.gal-header {
+  font-size: 14px;
+  background-color: var(--accent-color);
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
+
+.gallery-imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.gallery-imgs img {
+  height: 150px;
+  width: auto;
+}
+
+/* universal css */
+/* INTRO */
+.intro {
   font-family: "Inconsolata", monospace;
   border: 1px solid white;
   padding: 15px;
@@ -483,31 +577,33 @@ body {
   justify-content: center;
 }
 
-#intro span {
+.intro span {
   color: #69a3c5;
   font-style: italic;
 }
 
-#start-letter span {
-  font-size: 13px;
-  font-weight: bold;
+/* IMAGE */
+.img-date {
   font-style: italic;
-  color: #69a3c5;
+  opacity: 0.5;
+  font-size: 9px;
 }
 
-#start-img img {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.img-caption {
+  font-style: italic;
+  opacity: 0.75;
 }
 
-#start-img span {
-    font-style: italic;
-    opacity: 0.5;
-    font-size: 9px;
+/* sushi */
+#sushi-gallery {
+  justify-content: space-between;
+  row-gap: 10px;
+  border-top: 1px solid #62a2c7;
+  padding-top: 10px;
 }
 
-/* early adventures */
-#early-adventures .adv-title {
-    border-bottom: 1px solid #69a3c5;
+#sushi-gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
