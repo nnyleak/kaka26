@@ -161,7 +161,15 @@
     <div id="desktop">
       <!-- LOADING SCREEN -->
       <div id="loading-screen">
-        <div id="loading-text">loading desktop...</div>
+        <div id="loading-content">
+          <div id="loading-text">
+            loading desktop...
+          </div>
+          <div id="loading-bar">
+            <div id="loading-fill"></div>
+          </div>
+        </div>
+        <!-- <div id="loading-text">loading desktop...</div> -->
       </div>
 
       <!-- WINDOWS -->
@@ -723,6 +731,7 @@
             </div>
             <div class="widget-header">𑣲⋆ happy 3 years my love ❤︎₊ ⊹</div>
           </div>
+          <div id="oneko-bed"></div>
         </div>
 
         <div class="widget-row">
@@ -763,7 +772,17 @@
             </div>
             <div class="widget-header">now playing ♬⋆.˚</div>
           </div>
+          <!-- photo slideshow -->
+          <div class="widget" id="memory-slideshow">
+            <div class="widget-body">
+              <img src="" id="mem-photo" />
+              <div id="mem-caption">sample caption</div>
+            </div>
+            <div class="widget-header">memories</div>
+          </div>
+        </div>
 
+        <div class="widget-row">
           <!-- stats -->
           <div class="widget" id="stats">
             <div class="widget-body">
@@ -810,22 +829,11 @@
             <div class="widget-header">system</div>
           </div>
         </div>
-
-        <div class="widget-row">
-          <!-- photo slideshow -->
-          <div class="widget" id="memory-slideshow">
-            <div class="widget-body">
-              <img src="" id="mem-photo" />
-              <div id="mem-caption">sample caption</div>
-            </div>
-            <div class="widget-header">memories</div>
-          </div>
-        </div>
       </div>
     </div>
 
     <script src="src/desktop.js"></script>
-    <script src="src/widgets.js"></script>
     <script src="src/oneko.js"></script>
+    <script src="src/widgets.js"></script>
   </body>
 </html>

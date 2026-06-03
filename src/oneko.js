@@ -8,13 +8,15 @@
   if (isReducedMotion) return;
 
   const nekoEl = document.createElement("div");
-  let persistPosition = true;
+  let persistPosition = false;
 
   let nekoPosX = 32;
   let nekoPosY = 32;
 
   let mousePosX = 0;
   let mousePosY = 0;
+
+  let isAwake = false;
 
   let frameCount = 0;
   let idleTime = 0;
@@ -85,6 +87,19 @@
     ],
   };
 
+  window.wakeOneko = function () {
+    isAwake = true;
+    idleTime = 0;
+  };
+
+  window.moveOneko = function (x, y) {
+    nekoPosX = x;
+    nekoPosY = y;
+
+    nekoEl.style.left = `${x - 16}px`;
+    nekoEl.style.top = `${y - 16}px`;
+  }
+
   function init() {
     let nekoFile = "../assets/images/oneko.gif";
     const curScript = document.currentScript;
@@ -121,11 +136,11 @@
     nekoEl.style.width = "32px";
     nekoEl.style.height = "32px";
     nekoEl.style.position = "fixed";
-    nekoEl.style.pointerEvents = "none";
+    nekoEl.style.pointerEvents = "auto";
     nekoEl.style.imageRendering = "pixelated";
     nekoEl.style.left = `${nekoPosX - 16}px`;
     nekoEl.style.top = `${nekoPosY - 16}px`;
-    nekoEl.style.zIndex = 2147483647;
+    nekoEl.style.zIndex = 500;
 
     nekoEl.style.backgroundImage = `url(${nekoFile})`;
 
@@ -243,6 +258,12 @@
 
   function frame() {
     frameCount += 1;
+
+    if (!isAwake) {
+      setSprite("sleeping", Math.floor(frameCount / 4));
+      return;
+    }
+
     const diffX = nekoPosX - mousePosX;
     const diffY = nekoPosY - mousePosY;
     const distance = Math.sqrt(diffX ** 2 + diffY ** 2);

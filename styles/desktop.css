@@ -39,15 +39,49 @@ body {
 #loading-screen {
   position: fixed;
   inset: 0;
+  z-index: 9999;
 
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
-  color: white;
-  z-index: 1000;
-  transition: all 0.5s ease;
+  background-color: #211414;
+
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#loading-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+#loading-bar {
+  width: 340px;
+  height: 12px;
+
+  border: 2px solid var(--accent-color);
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+#loading-fill {
+  width: 0%;
+  height: 100%;
+
+  border-radius: 999px;
+  background-color: var(--accent-color);
+
+  transition: width 0.2s linear;
 }
 
 /* ICONS */
@@ -265,6 +299,7 @@ body {
   background-color: #211414;
   border: 2px solid black;
   box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.5);
+  height: fit-content;
 }
 
 .widget-header {

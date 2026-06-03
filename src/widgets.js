@@ -57,6 +57,9 @@ const currentTime = document.getElementById("current-time");
 const fullTime = document.getElementById("full-time");
 const barBox = document.getElementById("bar-box");
 
+const onekoBed = document.getElementById("oneko-bed");
+console.log(onekoBed);
+
 const memPhotos = [
   {
     image: "../assets/images/mem-widget/pic1.jpg",
@@ -235,3 +238,16 @@ function nextPhoto() {
 
 nextPhoto();
 setInterval(nextPhoto, 5000);
+
+// ONEKO
+window.addEventListener("load", () => {
+  const rect = onekoBed.getBoundingClientRect();
+
+  const oneko = document.getElementById("oneko");
+
+  moveOneko(rect.left + 5, rect.top + rect.bottom - 30);
+
+  oneko.addEventListener("click", () => {
+    wakeOneko();
+  });
+});

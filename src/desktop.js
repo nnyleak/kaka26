@@ -8,14 +8,42 @@ const allApps = new Map();
 const openSfx = new Audio("../assets/sfx/windows-xp-start.wav");
 const closeSfx = new Audio("../assets/sfx/windows-xp-minimize.wav");
 
-// loading screen logic
+const loadingScreen = document.getElementById("loading-screen");
+const loadingFill = document.getElementById("loading-fill");
 const loadingText = document.getElementById("loading-text");
-const interval = setInterval(() => {
-  audio.play();
-  clearInterval(interval);
-  document.getElementById("loading-screen").style.display = "none";
-  return;
-}, 2000);
+let loadingProgress = 0;
+
+// loading screen logic
+// const loadingText = document.getElementById("loading-text");
+// const interval = setInterval(() => {
+//   audio.play();
+//   clearInterval(interval);
+//   document.getElementById("loading-screen").style.display = "none";
+//   return;
+// }, 2000);
+const loadingInterval = setInterval(() => {
+  loadingProgress += Math.random() * 20;
+
+  if (loadingProgress >=100) {
+    loadingProgress = 100;
+    loadingFill.style.width = "100%";
+    loadingText.innerText = "desktop loaded!";
+
+    clearInterval(loadingInterval);
+
+    setTimeout(() => {
+      loadingScreen.classList.add("fade-out");
+
+      audio.play();
+
+      setTimeout(() => {
+        loadingScreen.remove();
+      }, 1000);
+    }, 500);
+  } else {
+    loadingFill.style.width = `${loadingProgress}%`;
+  }
+}, 200);
 
 // make windows draggable
 function makeDraggable(win) {
