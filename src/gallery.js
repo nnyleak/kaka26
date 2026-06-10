@@ -404,7 +404,6 @@ const galleries = {
 document.querySelectorAll(".gallery-imgs").forEach((gal) => {
   const winId = gal.closest(".window").id;
 
-  // catch error
   if (!galleries[winId]) return;
 
   galleries[winId].forEach((photo) => {
