@@ -14,20 +14,13 @@ const loadingText = document.getElementById("loading-text");
 let loadingProgress = 0;
 
 // loading screen logic
-// const loadingText = document.getElementById("loading-text");
-// const interval = setInterval(() => {
-//   audio.play();
-//   clearInterval(interval);
-//   document.getElementById("loading-screen").style.display = "none";
-//   return;
-// }, 2000);
 const loadingInterval = setInterval(() => {
   loadingProgress += Math.random() * 20;
 
   if (loadingProgress >=100) {
     loadingProgress = 100;
     loadingFill.style.width = "100%";
-    loadingText.innerText = "desktop loaded!";
+    loadingText.innerText = "WELCOME BEBI! ♡";
 
     clearInterval(loadingInterval);
 

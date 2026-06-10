@@ -6,43 +6,43 @@ const songs = [
     title: "main theme",
     artist: "oishinbo ds recipe",
     src: "../assets/music/oishinbo-ds-recipe-main-theme.mp3",
-    cover: "../assets/images/covers/oishinbo-ds-recipe-pixel-cover.png",
+    cover: "../assets/images/covers/oishinbo-ds-recipe-cover.jpg",
   },
   {
     title: "look",
     artist: "red velvet",
     src: "../assets/music/look-red-velvet.mp3",
-    cover: "../assets/images/covers/look-pixel-cover.png",
+    cover: "../assets/images/covers/look-cover.jfif",
   },
   {
     title: "miniskirt",
     artist: "aoa",
     src: "../assets/music/miniskirt-aoa.mp3",
-    cover: "../assets/images/covers/miniskirt-pixel-cover.png",
+    cover: "../assets/images/covers/miniskirt-cover.jpg",
   },
   {
     title: "polaroid love",
     artist: "enhypen",
     src: "../assets/music/polaroid-love-enhypen.mp3",
-    cover: "../assets/images/covers/polaroid-love-pixel-cover.png",
+    cover: "../assets/images/covers/polaroid-love-enhypen.jpg",
   },
   {
     title: "replay",
     artist: "shinee",
     src: "../assets/music/replay-shinee.mp3",
-    cover: "../assets/images/covers/replay-pixel-cover.png",
+    cover: "../assets/images/covers/replay-cover.jpg",
   },
   {
     title: "suddenly",
     artist: "ioi",
     src: "../assets/music/suddenly-ioi.mp3",
-    cover: "../assets/images/covers/suddenly-pixel-cover.png",
+    cover: "../assets/images/covers/suddenly-cover.jfif",
   },
   {
     title: "not cute anymore",
     artist: "illit",
     src: "../assets/music/not-cute-anymore-illit.mp3",
-    cover: "../assets/images/covers/not-cute-anymore-pixel-cover.png",
+    cover: "../assets/images/covers/not-cute-anymore-cover.jfif",
   },
 ];
 let currentSong = 0;
@@ -62,20 +62,16 @@ console.log(onekoBed);
 
 const memPhotos = [
   {
-    image: "../assets/images/mem-widget/pic1.jpg",
-    caption: "caption 1",
+    image: "../assets/images/mem-lane/pic1.jpg",
   },
   {
-    image: "../assets/images/mem-widget/pic2.jpg",
-    caption: "caption 2",
+    image: "../assets/images/mem-lane/pic2.jpg",
   },
   {
-    image: "../assets/images/mem-widget/pic3.jpg",
-    caption: "caption 3",
+    image: "../assets/images/mem-lane/pic3.jpg",
   },
 ];
 const memPhoto = document.getElementById("mem-photo");
-const memCaption = document.getElementById("mem-caption");
 let currentMem = 0;
 const shuffledMems = [...memPhotos].sort(() => Math.random() - 0.5);
 
@@ -227,7 +223,6 @@ function nextPhoto() {
   const mem = shuffledMems[currentMem];
 
   memPhoto.src = mem.image;
-  memCaption.innerText = mem.caption;
 
   currentMem++;
 
