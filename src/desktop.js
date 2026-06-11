@@ -38,6 +38,80 @@ const loadingInterval = setInterval(() => {
   }
 }, 200);
 
+// make windows resizable
+function makeResizable(win) {
+  const directions = ["n", "s", "e", "w", "ne", "nw", "se", "sw"];
+
+  directions.forEach((dir) => {
+    const handle = document.createElement("div");
+    handle.classList.add("resize-handle", `resize-${dir}`);
+    win.appendChild(handle);
+
+    handle.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      focusWindow(win);
+
+      const startX = e.clientX;
+      const startY = e.clientY;
+      const startW = win.offsetWidth;
+      const startH = win.offsetHeight;
+      const startLeft = win.offsetLeft;
+      const startTop = win.offsetTop;
+      const contentBody = win.querySelector(".content-body");
+      const headerH = win.querySelector(".win-header").offsetHeight;
+      const MIN_W = 200;
+      const MIN_H = headerH + 60;
+      const wOverhead = contentBody ? startW - contentBody.offsetWidth + 19 : 0;
+      const hOverhead = contentBody ? startH - contentBody.offsetHeight : headerH + 40;
+      const startMaxH = contentBody ? contentBody.offsetHeight - 22 : 0;
+
+      function onMove(e) {
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+
+        let newW = startW;
+        let newH = startH;
+        let newLeft = startLeft;
+        let newTop = startTop;
+
+        if (dir.includes("e")) newW = Math.max(MIN_W, startW + dx);
+        if (dir.includes("s")) newH = Math.max(MIN_H, startH + dy);
+        if (dir.includes("w")) {
+          newW = Math.max(MIN_W, startW - dx);
+          newLeft = startLeft + startW - newW;
+        }
+        if (dir.includes("n")) {
+          newH = Math.max(MIN_H, startH - dy);
+          newTop = startTop + startH - newH;
+        }
+
+        win.style.width = newW + "px";
+        win.style.left = newLeft + "px";
+        win.style.top = newTop + "px";
+
+        if (contentBody) {
+          if (dir.includes("e") || dir.includes("w")) {
+            contentBody.style.width = Math.max(100, newW - wOverhead) + "px";
+          }
+          if (dir.includes("s") || dir.includes("n")) {
+            contentBody.style.maxHeight = Math.max(60, startMaxH + (newH - startH)) + "px";
+          }
+        }
+      }
+
+      function onUp() {
+        document.removeEventListener("mousemove", onMove);
+        document.removeEventListener("mouseup", onUp);
+      }
+
+      document.addEventListener("mousemove", onMove);
+      document.addEventListener("mouseup", onUp);
+    });
+  });
+}
+
 // make windows draggable
 function makeDraggable(win) {
   const header = win.querySelector(".win-header");
@@ -122,6 +196,7 @@ windows.forEach((win) => {
   allApps.set(id, { win, tab });
 
   makeDraggable(win);
+  makeResizable(win);
 
   // focus window and tab
   win.addEventListener("mousedown", () => {
